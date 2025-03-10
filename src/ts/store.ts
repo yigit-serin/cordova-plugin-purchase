@@ -697,6 +697,21 @@ namespace CdvPurchase {
         }
 
         /**
+         * Opens the App Store's code redemption sheet.
+         * 
+         * This method is only available on iOS.
+         * 
+         * @example
+         * store.presentCodeRedemptionSheet();
+         */
+        async presentCodeRedemptionSheet(): Promise<IError | undefined> {
+            this.log.info('presentCodeRedemptionSheet()');
+            const adapter = this.adapters.findReady(Platform.APPLE_APPSTORE);
+            if (!adapter) return storeError(ErrorCode.SETUP, "Found no adapter ready to handle 'presentCodeRedemptionSheet'", Platform.APPLE_APPSTORE, null);
+            return adapter.presentCodeRedemptionSheet();
+        }
+
+        /**
          * The default payment platform to use depending on the OS.
          *
          * - on iOS: `APPLE_APPSTORE`

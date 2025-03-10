@@ -1962,6 +1962,25 @@ var CdvPurchase;
                 return adapter.manageBilling();
             });
         }
+
+        /**
+         * Opens the App Store's code redemption sheet.
+         * 
+         * This method is only available on iOS.
+         * 
+         * @example
+         * store.presentCodeRedemptionSheet();
+         */
+        presentCodeRedemptionSheet() {
+            return __awaiter(this, void 0, void 0, function* () {
+                this.log.info('presentCodeRedemptionSheet()');
+                const adapter = this.adapters.findReady(CdvPurchase.Platform.APPLE_APPSTORE);
+                if (!adapter)
+                    return CdvPurchase.storeError(CdvPurchase.ErrorCode.SETUP, "Found no adapter ready to handle 'presentCodeRedemptionSheet'", CdvPurchase.Platform.APPLE_APPSTORE, null);
+                return adapter.presentCodeRedemptionSheet();
+            });
+        }
+        
         /**
          * The default payment platform to use depending on the OS.
          *
