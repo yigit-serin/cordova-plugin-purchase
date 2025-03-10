@@ -1103,6 +1103,15 @@ declare namespace CdvPurchase {
          */
         manageBilling(platform?: Platform): Promise<IError | undefined>;
         /**
+         * Opens the App Store's code redemption sheet.
+         * 
+         * This method is only available on iOS.
+         * 
+         * @example
+         * store.presentCodeRedemptionSheet();
+         */
+        presentCodeRedemptionSheet(): Promise<IError | undefined>;
+        /**
          * The default payment platform to use depending on the OS.
          *
          * - on iOS: `APPLE_APPSTORE`
