@@ -3374,8 +3374,10 @@ var CdvPurchase;
                 });
             }
             presentCodeRedemptionSheet() {
-                return new Promise(resolve => {
-                    this.bridge.presentCodeRedemptionSheet(resolve);
+                console.log("www/store.js presentCodeRedemptionSheet");
+                return __awaiter(this, void 0, void 0, function* () {
+                    this.bridge.presentCodeRedemptionSheet();
+                    return;
                 });
             }
         }

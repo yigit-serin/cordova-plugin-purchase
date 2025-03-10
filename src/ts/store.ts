@@ -705,6 +705,7 @@ namespace CdvPurchase {
          * store.presentCodeRedemptionSheet();
          */
         async presentCodeRedemptionSheet(): Promise<IError | undefined> {
+            console.log("ts/store.js presentCodeRedemptionSheet");
             this.log.info('presentCodeRedemptionSheet()');
             const adapter = this.adapters.findReady(Platform.APPLE_APPSTORE);
             if (!adapter) return storeError(ErrorCode.SETUP, "Found no adapter ready to handle 'presentCodeRedemptionSheet'", Platform.APPLE_APPSTORE, null);

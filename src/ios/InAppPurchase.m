@@ -332,6 +332,7 @@ static NSString *toTimestamp(NSDate *date) {
 #endif
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"presentCodeRedemptionSheet"];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    NSLog(@"presentCodeRedemptionSheet Initialized.");
 }
 
 /**

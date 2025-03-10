@@ -1344,7 +1344,7 @@ declare namespace CdvPurchase {
      *
      * @see {@link Store.checkSupport}
      */
-    type PlatformFunctionality = 'requestPayment' | 'order' | 'manageSubscriptions' | 'manageBilling';
+    type PlatformFunctionality = 'requestPayment' | 'order' | 'manageSubscriptions' | 'manageBilling' | 'presentCodeRedemptionSheet';
     /**
      * Possible states of a transaction.
      *
